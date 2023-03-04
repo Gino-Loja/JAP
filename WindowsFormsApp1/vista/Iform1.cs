@@ -22,8 +22,12 @@ namespace WindowsFormsApp1.vista
         string  IdObetnidoDataGrid { get; set; }
 
 
-        event EventHandler EventoBuscar;
-        event EventHandler EventoSelecionarUsuario;
+
+        event EventHandler EventoMostrarDashboard;
+        event EventHandler EventoMostrarVUsuarios;
+        event EventHandler EventoMostrarVistaPeriodo;
+
+
         void EstablecerListaDatagrid(BindingSource lista);
         void EstablecerListaLecturaDatagrid(BindingSource lista);
         void Show();

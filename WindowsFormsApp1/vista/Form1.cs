@@ -13,7 +13,6 @@ using WindowsFormsApp1.model;
 using MySql.Data.MySqlClient;
 using WindowsFormsApp1.vista;
 using DocumentFormat.OpenXml.Wordprocessing;
-using System.Windows.Controls;
 using DocumentFormat.OpenXml.Drawing.Spreadsheet;
 
 
@@ -30,49 +29,84 @@ namespace WindowsFormsApp1
 
             InitializeComponent();
 
-          
-
             EventosAsociadosVista();
-            
-            tabControl1.TabPages.Remove(tabPage2);
-            tabControl1.TabPages.Remove(tabPage3);
+           
+            ChangesTab();
 
 
         }
 
-        
-        
-
         //eventos
         public event EventHandler EventoBuscar;
         public event EventHandler EventoSelecionarUsuario;
+        public event EventHandler EventoMostrarDashboard;
+        public event EventHandler EventoMostrarVUsuarios;
+        public event EventHandler EventoMostrarVistaPeriodo;
+
+        private TabControl tab;
+        //menu
+        private void hideSubmenu()
+        {
+            if (panelSubmenuUsuario.Visible == true)
+            {
+                panelSubmenuUsuario.Visible = false;
+            }
+            if (panel2_consumos.Visible == true)
+            {
+                panel2_consumos.Visible = false;
+            }
+        }
+        private void ShowSubmenu(Panel Sub)
+        {
+            if (Sub.Visible == false)
+            {
+                hideSubmenu();
+                Sub.Visible = true;
+            }
+            else
+            {
+                Sub.Visible = false;        
+            }
+        }
+        //tab control
+        private void ChangesTab()
+        {
+            //MessageBox.Show("cerrandon");
+            tabControl1.TabPages.Clear();
+            
+            //tabControl1.TabPages[0].Visible = true; 
+        }
 
         private void EventosAsociadosVista()
         {
             button1.Click += delegate { EventoBuscar?.Invoke(this, EventArgs.Empty); };
 
-            button2.Click += delegate { 
+            button5_periodo.Click += delegate
+            {
+                EventoMostrarVistaPeriodo?.Invoke(this, EventArgs.Empty);
+            };           
+            button4_usuarios.Click += delegate { 
+
+                EventoMostrarVUsuarios?.Invoke(this, EventArgs.Empty); 
+            };
+
+            button6_Dashboard.Click += delegate
+            {
+                EventoMostrarDashboard?.Invoke(this, EventArgs.Empty);
+            
+            };
 
 
-                tabControl1.TabPages.Remove(tabPage1);
+            button2.Click += delegate {
 
-                if (tabControl1.TabPages.Count == 0)
-                {
-                    tabControl1.TabPages.Add(tabPage2);
-                }
-
+                ChangesTab();
+                tabControl1.TabPages.Add(tabPage2);
                 EventoSelecionarUsuario?.Invoke(this, EventArgs.Empty);
-                
-
+          
             };   
                                                     
             
         }
-
-
-        
-
-
         public string UsuarioNombre 
         { 
             get => txtBuscar.Text; 
@@ -94,11 +128,9 @@ namespace WindowsFormsApp1
         private void button3_Click(object sender, EventArgs e)
         {
 
-            tabControl1.TabPages.Remove(tabPage2);
-            if (tabControl1.TabPages.Count == 0)
-            {
+                ChangesTab();
                 tabControl1.TabPages.Add(tabPage1);
-            }
+            
         }
 
         // funciones de combinacion de celdas
@@ -168,36 +200,41 @@ namespace WindowsFormsApp1
             
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {   
+                //ChangesTab();
+                //tabControl1.TabPages.Add(tabPage4);
+            
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_consumo_Click_1(object sender, EventArgs e)
+        {
+            ShowSubmenu(panel2_consumos);
+        }
+
+        private void button4_usuarios_Click(object sender, EventArgs e)
+        {
+            ShowSubmenu(panelSubmenuUsuario);
+            EventoSelecionarUsuario?.Invoke(this, EventArgs.Empty);
+        }
     }
 
-     
-
-
-
-        //    SLDocument sl = new SLDocument(dir, "LISTADO MARISCAL SUCRE");
-        //    List<ModeloUsuarios> listUser = new List<ModeloUsuarios>();
-
-        //    int num = 5;
-
-        //    while (num != 80)
-        //    {
-        //        ModeloUsuarios md = new ModeloUsuarios();
-        //        md.No = sl.GetCellValueAsString(num, 1);
-        //        md.Nombre = sl.GetCellValueAsString(num, 2);
-        //        md.Lectura = sl.GetCellValueAsString(num, 3);
-        //        md.Consumo = sl.GetCellValueAsString(num, 4);
-        //        md.Exceso = sl.GetCellValueAsString(num, 5);
-        //        listUser.Add(md);
-        //        num++;      
-        //    }
-
-
-
-
-        //    dataGridView1.DataSource = listUser;
-
-
-        //}
 
 
     

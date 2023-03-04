@@ -1,0 +1,100 @@
+CREATE TABLE `comunidades` (
+  `id` TINYINT NOT NULL AUTO_INCREMENT ,
+  `comunidad` VARCHAR(75) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB ;
+
+insert into comunidades 
+values('MARISCAL SUCRE'),
+      ('NUEVA ECUADOR');
+
+CREATE TABLE `anios` (
+  `id` TINYINT NOT NULL AUTO_INCREMENT ,
+  `anios` SMALLINT NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB ;
+
+insert into anios 
+values(2021),
+      (2022),
+      (2023),
+      (2024),
+      (2025);
+
+
+CREATE TABLE `meses` (
+  `id` TINYINT  AUTO_INCREMENT NOT NULL,
+  `mes` varchar(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB ;
+
+insert into meses 
+values('Enero'),
+      ('Febrero'),
+      ('Marzo'),
+      ('Abril'),
+      ('Mayo')
+      ('Junio'),
+      ('Julio'),
+      ('Agosto'),
+      ('Septiembre'),
+      ('Octubre')
+      ('Noviembre'),
+      ('Diciembre');
+
+CREATE TABLE `tarifa` (
+  `id` TINYINT NOT NULL AUTO_INCREMENT ,
+  `costo_m` DECIMAL(5,2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB ;
+
+
+insert into tarifa 
+values(5.00);
+
+CREATE TABLE `usuarios` (
+  `id` varchar(10) NOT NULL,
+  `nombres` varchar(100) NOT NULL,
+  `discapacidad` varchar(1) NOT NULL,
+  `comunidad` TINYINT NOT NULL,	
+  `telefono` varchar(10) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  CONSTRAINT `fk_comunidades_usuarios` FOREIGN KEY (`comunidad`) REFERENCES `comunidades` (`id`),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB ;
+
+
+CREATE TABLE `lectura` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `id_usuarios` varchar(10) NOT NULL,
+  `lectura` INT NOT NULL,
+  `observacion` TEXT NOT NULL,
+  `exceso` INT NOT NULL,
+  `id_mes` TINYINT varchar(10) NOT NULL,
+  `id_anio` TINYINT NOT NULL,
+   CONSTRAINT `fk_usuario_lectura` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`),
+   CONSTRAINT `fk_meses_lectura` FOREIGN KEY (`id_mes`) REFERENCES `meses` (`id`),
+   CONSTRAINT `fk_anios_lectura` FOREIGN KEY (`id_anios`) REFERENCES `anios` (`id`)
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB ;
+
+CREATE TABLE `planilla` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `id_lectura` INT NOT NULL,
+  `id_tarifa` INT NOT NULL,
+  `fecha_emision` DATE NOT NULL,
+  `pago_total` DECIMAL(5,2) NOT NULL,
+  `lectura` INT NOT NULL
+   CONSTRAINT `fk_lectura_planilla` FOREIGN KEY (`id_lectura`) REFERENCES `lectura` (`id`),
+   CONSTRAINT `fk_lectura_tarifa` FOREIGN KEY (`id_tarifa`) REFERENCES `tarifa` (`id`)
+  PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB ;
+
+CREATE TABLE `usuarios_admin` (
+  `id_usuario` varchar(10) NOT NULL,
+  `rol` varchar(15) NOT NULL,--administrador
+  CONSTRAINT `fk_usuarios_usuarios_admin` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB ;

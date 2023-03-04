@@ -20,9 +20,10 @@ namespace WindowsFormsApp1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=root;database=junta_mariscal;";
-            Irepositorio repo = new Repositorio(connectionString);
+
+            //Irepositorio repo = new Repositorio(connectionString);
             Iform1 vis = new Form1();
-            new presentadorU(vis, repo);
+            new PPrincipal(vis, connectionString);
             Application.Run((Form)vis);
         }
     }

@@ -16,7 +16,6 @@ namespace WindowsFormsApp1.model
         private string idl;
         private string enero;
         private string febrero;
-
         private string marzo;
         private string abril;
         private string mayo;

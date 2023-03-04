@@ -28,11 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2_consumos = new System.Windows.Forms.Panel();
+            this.button9_egresos = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7_consumo = new System.Windows.Forms.Button();
+            this.button6_costo_m = new System.Windows.Forms.Button();
+            this.button5_periodo = new System.Windows.Forms.Button();
+            this.panelSubmenuUsuario = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4_usuarios = new System.Windows.Forms.Button();
+            this.button6_Dashboard = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -42,14 +51,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
+            this.panel2_consumos.SuspendLayout();
+            this.panelSubmenuUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -58,68 +70,204 @@
             this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.panel2_consumos);
+            this.panel1.Controls.Add(this.button7_consumo);
+            this.panel1.Controls.Add(this.button6_costo_m);
+            this.panel1.Controls.Add(this.button5_periodo);
+            this.panel1.Controls.Add(this.panelSubmenuUsuario);
+            this.panel1.Controls.Add(this.button4_usuarios);
+            this.panel1.Controls.Add(this.button6_Dashboard);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(145, 589);
+            this.panel1.TabIndex = 1;
+            // 
+            // panel2_consumos
+            // 
+            this.panel2_consumos.Controls.Add(this.button9_egresos);
+            this.panel2_consumos.Controls.Add(this.button8);
+            this.panel2_consumos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2_consumos.Location = new System.Drawing.Point(0, 286);
+            this.panel2_consumos.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2_consumos.Name = "panel2_consumos";
+            this.panel2_consumos.Size = new System.Drawing.Size(145, 87);
+            this.panel2_consumos.TabIndex = 14;
+            this.panel2_consumos.Visible = false;
+            // 
+            // button9_egresos
+            // 
+            this.button9_egresos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9_egresos.FlatAppearance.BorderSize = 0;
+            this.button9_egresos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9_egresos.Location = new System.Drawing.Point(0, 40);
+            this.button9_egresos.Margin = new System.Windows.Forms.Padding(2);
+            this.button9_egresos.Name = "button9_egresos";
+            this.button9_egresos.Size = new System.Drawing.Size(145, 45);
+            this.button9_egresos.TabIndex = 1;
+            this.button9_egresos.Text = "Ingresos y Egresos";
+            this.button9_egresos.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Location = new System.Drawing.Point(0, 0);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(145, 40);
+            this.button8.TabIndex = 0;
+            this.button8.Text = "Consumo m";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7_consumo
+            // 
+            this.button7_consumo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7_consumo.Location = new System.Drawing.Point(0, 248);
+            this.button7_consumo.Margin = new System.Windows.Forms.Padding(2);
+            this.button7_consumo.Name = "button7_consumo";
+            this.button7_consumo.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.button7_consumo.Size = new System.Drawing.Size(145, 38);
+            this.button7_consumo.TabIndex = 13;
+            this.button7_consumo.Text = "Consumos";
+            this.button7_consumo.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button7_consumo.UseVisualStyleBackColor = true;
+            this.button7_consumo.Click += new System.EventHandler(this.button7_consumo_Click_1);
+            // 
+            // button6_costo_m
+            // 
+            this.button6_costo_m.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6_costo_m.Location = new System.Drawing.Point(0, 211);
+            this.button6_costo_m.Margin = new System.Windows.Forms.Padding(2);
+            this.button6_costo_m.Name = "button6_costo_m";
+            this.button6_costo_m.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.button6_costo_m.Size = new System.Drawing.Size(145, 37);
+            this.button6_costo_m.TabIndex = 12;
+            this.button6_costo_m.Text = "Costo m";
+            this.button6_costo_m.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button6_costo_m.UseVisualStyleBackColor = true;
+            // 
+            // button5_periodo
+            // 
+            this.button5_periodo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5_periodo.Location = new System.Drawing.Point(0, 171);
+            this.button5_periodo.Margin = new System.Windows.Forms.Padding(2);
+            this.button5_periodo.Name = "button5_periodo";
+            this.button5_periodo.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.button5_periodo.Size = new System.Drawing.Size(145, 40);
+            this.button5_periodo.TabIndex = 11;
+            this.button5_periodo.Text = "Periodo";
+            this.button5_periodo.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button5_periodo.UseVisualStyleBackColor = true;
+            // 
+            // panelSubmenuUsuario
+            // 
+            this.panelSubmenuUsuario.Controls.Add(this.button2);
+            this.panelSubmenuUsuario.Controls.Add(this.button3);
+            this.panelSubmenuUsuario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubmenuUsuario.Location = new System.Drawing.Point(0, 79);
+            this.panelSubmenuUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.panelSubmenuUsuario.Name = "panelSubmenuUsuario";
+            this.panelSubmenuUsuario.Size = new System.Drawing.Size(145, 92);
+            this.panelSubmenuUsuario.TabIndex = 10;
+            this.panelSubmenuUsuario.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.AutoSize = true;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(0, 45);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 37);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "lecturas";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // button3
             // 
             this.button3.AutoSize = true;
-            this.button3.Location = new System.Drawing.Point(0, 120);
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(163, 41);
+            this.button3.Size = new System.Drawing.Size(145, 45);
             this.button3.TabIndex = 2;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // button4_usuarios
             // 
-            this.button2.AutoSize = true;
-            this.button2.Location = new System.Drawing.Point(0, 42);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(163, 41);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "lecturas";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button4_usuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4_usuarios.Location = new System.Drawing.Point(0, 41);
+            this.button4_usuarios.Margin = new System.Windows.Forms.Padding(2);
+            this.button4_usuarios.Name = "button4_usuarios";
+            this.button4_usuarios.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.button4_usuarios.Size = new System.Drawing.Size(145, 38);
+            this.button4_usuarios.TabIndex = 3;
+            this.button4_usuarios.Text = "Usuarios";
+            this.button4_usuarios.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button4_usuarios.UseVisualStyleBackColor = true;
+            this.button4_usuarios.Click += new System.EventHandler(this.button4_usuarios_Click);
             // 
-            // panel1
+            // button6_Dashboard
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(163, 445);
-            this.panel1.TabIndex = 1;
+            this.button6_Dashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6_Dashboard.Location = new System.Drawing.Point(0, 0);
+            this.button6_Dashboard.Margin = new System.Windows.Forms.Padding(2);
+            this.button6_Dashboard.Name = "button6_Dashboard";
+            this.button6_Dashboard.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.button6_Dashboard.Size = new System.Drawing.Size(145, 41);
+            this.button6_Dashboard.TabIndex = 1;
+            this.button6_Dashboard.Text = "Dashboard";
+            this.button6_Dashboard.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button6_Dashboard.UseVisualStyleBackColor = true;
+            this.button6_Dashboard.Click += new System.EventHandler(this.button4_Click);
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 45);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 37);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(732, 374);
+            this.dataGridView1.Size = new System.Drawing.Size(690, 197);
             this.dataGridView1.TabIndex = 2;
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(6, 17);
+            this.txtBuscar.Location = new System.Drawing.Point(4, 14);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(181, 22);
+            this.txtBuscar.Size = new System.Drawing.Size(137, 20);
             this.txtBuscar.TabIndex = 3;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(214, 16);
+            this.button1.Location = new System.Drawing.Point(160, 13);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 4;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
@@ -132,11 +280,13 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(181, 12);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Location = new System.Drawing.Point(553, 326);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(752, 455);
+            this.tabControl1.Size = new System.Drawing.Size(705, 263);
             this.tabControl1.TabIndex = 5;
             this.tabControl1.TabStop = false;
             // 
@@ -145,10 +295,11 @@
             this.tabPage1.Controls.Add(this.txtBuscar);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(744, 426);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(697, 237);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -158,10 +309,11 @@
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.comboBox1);
             this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(744, 426);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(697, 237);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -169,18 +321,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(473, 392);
+            this.label1.Location = new System.Drawing.Point(355, 318);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 16);
+            this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Filtrar por a\'o";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(580, 384);
+            this.comboBox1.Location = new System.Drawing.Point(435, 312);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(139, 24);
+            this.comboBox1.Size = new System.Drawing.Size(105, 21);
             this.comboBox1.TabIndex = 1;
             // 
             // dataGridView2
@@ -188,22 +342,31 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            this.dataGridView2.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView2.Location = new System.Drawing.Point(4, 5);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 40;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(732, 360);
+            this.dataGridView2.Size = new System.Drawing.Size(549, 292);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView2_CellFormatting);
             this.dataGridView2.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView2_CellPainting);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Meses";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.listView1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(744, 426);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Size = new System.Drawing.Size(697, 237);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -218,10 +381,11 @@
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
-            this.listView1.Location = new System.Drawing.Point(74, 17);
+            listViewItem2});
+            this.listView1.Location = new System.Drawing.Point(56, 14);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(300, 302);
+            this.listView1.Size = new System.Drawing.Size(226, 246);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -238,24 +402,33 @@
             // 
             this.columnHeader1.DisplayIndex = 0;
             // 
-            // Column1
+            // tabPage4
             // 
-            this.Column1.HeaderText = "Meses";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Size = new System.Drawing.Size(697, 237);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 468);
+            this.ClientSize = new System.Drawing.Size(1263, 589);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
+            this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel2_consumos.ResumeLayout(false);
+            this.panelSubmenuUsuario.ResumeLayout(false);
+            this.panelSubmenuUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -269,8 +442,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtBuscar;
@@ -288,5 +459,17 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.Button button6_Dashboard;
+        private System.Windows.Forms.Button button4_usuarios;
+        private System.Windows.Forms.Button button9_egresos;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Panel panelSubmenuUsuario;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button6_costo_m;
+        private System.Windows.Forms.Button button5_periodo;
+        private System.Windows.Forms.Button button7_consumo;
+        private System.Windows.Forms.Panel panel2_consumos;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }

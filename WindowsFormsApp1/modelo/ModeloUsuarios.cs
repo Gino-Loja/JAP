@@ -10,7 +10,7 @@ namespace WindowsFormsApp1.model
     {
 
 
-
+        
         private string id;
         private string nombre  ;
         private string comunidad ;

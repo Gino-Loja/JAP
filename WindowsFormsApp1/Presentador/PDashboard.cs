@@ -10,19 +10,19 @@ using WindowsFormsApp1.vista;
 
 namespace WindowsFormsApp1.presentador
 {
-    public class presentadorU
+    public class PDashboard
     {
 
         //campos
 
-        private Iform1 vista;
+        private IDashboard vista;
         private Irepositorio repositorio;
         private IEnumerable<ModeloUsuarios> listaUsuarios;
         private IEnumerable<lecturaUsuario> listaLectura;
         private BindingSource recursoUsuario;
         private BindingSource recursoLectura;
 
-        public presentadorU(Iform1 vista, Irepositorio repositorio)
+        public PDashboard(IDashboard vista, Irepositorio repositorio)
         {
             this.recursoUsuario = new BindingSource();
             this.recursoLectura = new BindingSource();
@@ -30,7 +30,6 @@ namespace WindowsFormsApp1.presentador
             this.repositorio = repositorio;
             this.vista.EventoBuscar += BuscarUsuario;
             this.vista.EventoSelecionarUsuario += SeleccionarUsuario;
-            this.vista.EstablecerListaDatagrid(recursoUsuario);
            
             CargarUsuarioIniciar();
             this.vista.Show();
@@ -40,8 +39,6 @@ namespace WindowsFormsApp1.presentador
         {
             listaLectura = this.repositorio.GetlecturasUsuario(this.vista.IdObetnidoDataGrid);
             this.recursoLectura.DataSource = listaLectura;
-            this.vista.EstablecerListaLecturaDatagrid(this.recursoLectura);
-
         }
 
         private void CargarUsuarioIniciar()
