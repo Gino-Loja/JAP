@@ -7,24 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1.Vista;
+using WindowsFormsApp1.vista;
 
-namespace WindowsFormsApp1.vista
+namespace WindowsFormsApp1.Vista
 {
-    public partial class VPeriodo : Form, IPeriodo
+    public partial class VCostoM : Form, ICostoM
     {
-        public VPeriodo()
+        public VCostoM()
         {
             InitializeComponent();
         }
 
-        private static VPeriodo instancia;
-        
-        public static VPeriodo Instancia_VPeriodo()
+        private static VCostoM instancia;
+        public static VCostoM Instancia_VCostoM()
         {
             if (instancia == null || instancia.IsDisposed)
             {
-                instancia = new VPeriodo();
+                instancia = new VCostoM();
 
 
             }
@@ -38,11 +37,6 @@ namespace WindowsFormsApp1.vista
             }
             return instancia;
         }
-
-
-        private void VPeriodo_Load(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

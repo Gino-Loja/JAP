@@ -42,6 +42,8 @@ namespace WindowsFormsApp1
         public event EventHandler EventoMostrarDashboard;
         public event EventHandler EventoMostrarVUsuarios;
         public event EventHandler EventoMostrarVistaPeriodo;
+        public event EventHandler EventoMostrarVistaCostoM;
+        public event EventHandler EventoMostrarVistaConsumos;
 
         private TabControl tab;
         //menu
@@ -80,6 +82,13 @@ namespace WindowsFormsApp1
         private void EventosAsociadosVista()
         {
             button1.Click += delegate { EventoBuscar?.Invoke(this, EventArgs.Empty); };
+            button7_consumo.Click += delegate { 
+                EventoMostrarVistaConsumos?.Invoke(this, EventArgs.Empty); 
+            };
+
+            button6_costo_m.Click += delegate { 
+                EventoMostrarVistaCostoM?.Invoke(this, EventArgs.Empty); 
+            };
 
             button5_periodo.Click += delegate
             {

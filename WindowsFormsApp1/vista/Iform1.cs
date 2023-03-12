@@ -26,6 +26,9 @@ namespace WindowsFormsApp1.vista
         event EventHandler EventoMostrarDashboard;
         event EventHandler EventoMostrarVUsuarios;
         event EventHandler EventoMostrarVistaPeriodo;
+        event EventHandler EventoMostrarVistaCostoM;
+        event EventHandler EventoMostrarVistaConsumos;
+
 
 
         void EstablecerListaDatagrid(BindingSource lista);

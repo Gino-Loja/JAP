@@ -23,6 +23,20 @@ namespace WindowsFormsApp1.presentador
             this.view.EventoMostrarDashboard += Dashboard_EventoMostrarDashboard;
             this.view.EventoMostrarVUsuarios += View_EventoMostrarVUsuarios;
             this.view.EventoMostrarVistaPeriodo += View_EventoMostrarVistaPeriodo;
+            this.view.EventoMostrarVistaCostoM += View_EventoMostrarVistaCostoM;
+            this.view.EventoMostrarVistaConsumos += View_EventoMostrarVistaConsumos;
+        }
+
+        private void View_EventoMostrarVistaConsumos(object sender, EventArgs e)
+        {
+            IConsumos consumo =  VConsumos.Instancia_VConsumos();
+            new PConsumos(consumo);
+        }
+
+        private void View_EventoMostrarVistaCostoM(object sender, EventArgs e)
+        {
+            ICostoM costoM = VCostoM.Instancia_VCostoM();
+            new PCostoM(costoM);
         }
 
         private void View_EventoMostrarVistaPeriodo(object sender, EventArgs e)
