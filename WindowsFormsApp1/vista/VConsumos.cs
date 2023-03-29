@@ -18,11 +18,13 @@ namespace WindowsFormsApp1.Vista
         }
 
         private static VConsumos instancia;
-        public static VConsumos Instancia_VConsumos()
+        public static VConsumos Instancia_VConsumos(Form ContenedorPadre)
         {
             if (instancia == null || instancia.IsDisposed)
             {
                 instancia = new VConsumos();
+                instancia.MdiParent = ContenedorPadre;  
+                instancia.Dock = DockStyle.Fill;
 
 
             }

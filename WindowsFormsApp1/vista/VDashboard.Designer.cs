@@ -34,9 +34,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1509, 725);
+            this.ClientSize = new System.Drawing.Size(1494, 725);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "VDashboard";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);

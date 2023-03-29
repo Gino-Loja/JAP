@@ -21,12 +21,13 @@ namespace WindowsFormsApp1.vista
 
         private static VUsuario instancia;
 
-        public static VUsuario Instancia_VUsuario()
+        public static VUsuario Instancia_VUsuario(Form ContenedorPadre)
         {
             if (instancia == null || instancia.IsDisposed)
             {
                 instancia = new VUsuario();
-
+                instancia.MdiParent = ContenedorPadre;
+                instancia.Dock = DockStyle.Fill;
 
             }
             else

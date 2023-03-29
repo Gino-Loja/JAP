@@ -31,12 +31,14 @@ namespace WindowsFormsApp1.vista
         public int PagoUsuario { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string IdObetnidoDataGrid { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        public static VDashboard Instancia_Dashboard()
+        public static VDashboard Instancia_Dashboard(Form ContenedorPadre)
         {
             if (instancia == null || instancia.IsDisposed)
             {
                 instancia = new VDashboard();
-                
+                instancia.MdiParent = ContenedorPadre;
+                instancia.Dock = DockStyle.Fill;
+
 
             }
             else

@@ -126,6 +126,12 @@
     <Compile Include="Vista\VUsuario.Designer.cs">
       <DependentUpon>VUsuario.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vista\VConsumos.resx">
+      <DependentUpon>VConsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VCostoM.resx">
+      <DependentUpon>VCostoM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\VDashboard.resx">
       <DependentUpon>VDashboard.cs</DependentUpon>
     </EmbeddedResource>

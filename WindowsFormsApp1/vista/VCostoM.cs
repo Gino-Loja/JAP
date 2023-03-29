@@ -19,11 +19,13 @@ namespace WindowsFormsApp1.Vista
         }
 
         private static VCostoM instancia;
-        public static VCostoM Instancia_VCostoM()
+        public static VCostoM Instancia_VCostoM(Form ContenedorPadre)
         {
             if (instancia == null || instancia.IsDisposed)
             {
                 instancia = new VCostoM();
+                instancia.MdiParent = ContenedorPadre;
+                instancia.Dock = DockStyle.Fill;
 
 
             }

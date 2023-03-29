@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using WindowsFormsApp1.Presentador;
 using WindowsFormsApp1.repositorio;
 using WindowsFormsApp1.vista;
@@ -29,32 +30,32 @@ namespace WindowsFormsApp1.presentador
 
         private void View_EventoMostrarVistaConsumos(object sender, EventArgs e)
         {
-            IConsumos consumo =  VConsumos.Instancia_VConsumos();
+            IConsumos consumo =  VConsumos.Instancia_VConsumos((Form)view);
             new PConsumos(consumo);
         }
 
         private void View_EventoMostrarVistaCostoM(object sender, EventArgs e)
         {
-            ICostoM costoM = VCostoM.Instancia_VCostoM();
+            ICostoM costoM = VCostoM.Instancia_VCostoM((Form)view);
             new PCostoM(costoM);
         }
 
         private void View_EventoMostrarVistaPeriodo(object sender, EventArgs e)
         {
-            IPeriodo periodo = VPeriodo.Instancia_VPeriodo();
+            IPeriodo periodo = VPeriodo.Instancia_VPeriodo((Form)view);
             new PPeriodo(periodo);
         }
 
         private void View_EventoMostrarVUsuarios(object sender, EventArgs e)
         {
-            IUsuarios VUsuarios = VUsuario.Instancia_VUsuario();
+            IUsuarios VUsuarios = VUsuario.Instancia_VUsuario((Form)view);
             Irepositorio repositorio = new Repositorio(sqlConexionString);
             new PUsuarios(VUsuarios, repositorio);
         }
 
         private void Dashboard_EventoMostrarDashboard(object sender, EventArgs e)
         {
-            IDashboard dashboard = VDashboard.Instancia_Dashboard();
+            IDashboard dashboard = VDashboard.Instancia_Dashboard((Form)view);
             Irepositorio repositorio = new Repositorio(sqlConexionString);
             new PDashboard(dashboard, repositorio);
 

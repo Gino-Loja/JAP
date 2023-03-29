@@ -20,11 +20,13 @@ namespace WindowsFormsApp1.vista
 
         private static VPeriodo instancia;
         
-        public static VPeriodo Instancia_VPeriodo()
+        public static VPeriodo Instancia_VPeriodo(Form ContenedorPadre)
         {
             if (instancia == null || instancia.IsDisposed)
             {
                 instancia = new VPeriodo();
+                instancia.MdiParent = ContenedorPadre;
+                instancia.Dock = DockStyle.Fill;
 
 
             }

@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
 
             EventosAsociadosVista();
            
-            ChangesTab();
+           // ChangesTab();
 
 
         }
@@ -71,17 +71,17 @@ namespace WindowsFormsApp1
             }
         }
         //tab control
-        private void ChangesTab()
-        {
+        //private void ChangesTab()
+        //{
             //MessageBox.Show("cerrandon");
-            tabControl1.TabPages.Clear();
+            //tabControl1.TabPages.Clear();
             
             //tabControl1.TabPages[0].Visible = true; 
-        }
+        //}
 
         private void EventosAsociadosVista()
         {
-            button1.Click += delegate { EventoBuscar?.Invoke(this, EventArgs.Empty); };
+            //button1.Click += delegate { EventoBuscar?.Invoke(this, EventArgs.Empty); };
             button7_consumo.Click += delegate { 
                 EventoMostrarVistaConsumos?.Invoke(this, EventArgs.Empty); 
             };
@@ -108,106 +108,110 @@ namespace WindowsFormsApp1
 
             button2.Click += delegate {
 
-                ChangesTab();
-                tabControl1.TabPages.Add(tabPage2);
-                EventoSelecionarUsuario?.Invoke(this, EventArgs.Empty);
+               // ChangesTab();
+               // tabControl1.TabPages.Add(tabPage2);
+               // EventoSelecionarUsuario?.Invoke(this, EventArgs.Empty);
           
             };   
                                                     
             
         }
-        public string UsuarioNombre 
-        { 
-            get => txtBuscar.Text; 
-            set => txtBuscar.Text = value;  
-        }
+        //public string UsuarioNombre 
+       // { 
+            //get => txtBuscar.Text; 
+           // set => txtBuscar.Text = value;  
+       // }
         public string Usuarioid { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int UsuarioEdad { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string UsuarioDiscapacidad { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string BuscarUsuario { get => txtBuscar.Text; set => txtBuscar.Text = value; }
+       // public string BuscarUsuario { get => txtBuscar.Text; set => txtBuscar.Text = value; }
         public int PagoUsuario { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string IdObetnidoDataGrid { get => dataGridView1.CurrentRow.Cells[0].Value.ToString(); set => IdObetnidoDataGrid = dataGridView1.CurrentRow.Cells[0].Value.ToString(); }
+        public string UsuarioNombre { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string BuscarUsuario { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string IdObetnidoDataGrid { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        //public string IdObetnidoDataGrid { get => dataGridView1.CurrentRow.Cells[0].Value.ToString(); set => IdObetnidoDataGrid = dataGridView1.CurrentRow.Cells[0].Value.ToString(); }
 
 
-        public void EstablecerListaDatagrid(BindingSource lista)
-        {
-            dataGridView1.DataSource = lista;
-        }
+        //public void EstablecerListaDatagrid(BindingSource lista)
+        //{
+        //    dataGridView1.DataSource = lista;
+        //}
 
         private void button3_Click(object sender, EventArgs e)
         {
 
-                ChangesTab();
-                tabControl1.TabPages.Add(tabPage1);
+               // ChangesTab();
+               // tabControl1.TabPages.Add(tabPage1);
             
         }
 
         // funciones de combinacion de celdas
-        bool IsTheSameCellValue(int column, int row)
-        {
-            DataGridViewCell cell1 = dataGridView2[column, row];
-            DataGridViewCell cell2 = dataGridView2[column, row - 1];
-            if (cell1.Value == null || cell2.Value == null)
-            {
-                return false;
-            }
-            return cell1.Value.ToString() == cell2.Value.ToString();
-        }
-        private void dataGridView2_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            e.AdvancedBorderStyle.Bottom = DataGridViewAdvancedCellBorderStyle.None;
-            if (e.RowIndex < 1 || e.ColumnIndex < 0)
-                return;
-            if (IsTheSameCellValue(e.ColumnIndex, e.RowIndex))
-            {
-                e.AdvancedBorderStyle.Top = DataGridViewAdvancedCellBorderStyle.None;
-            }
-            else
-            {
-                e.AdvancedBorderStyle.Top = dataGridView2.AdvancedCellBorderStyle.Top;
-            }
+        //bool IsTheSameCellValue(int column, int row)
+        //{
+          //  DataGridViewCell cell1 = dataGridView2[column, row];
+           // DataGridViewCell cell2 = dataGridView2[column, row - 1];
+           // if (cell1.Value == null || cell2.Value == null)
+           // {
+             //   return false;
+           // }
+            //return cell1.Value.ToString() == cell2.Value.ToString();
+       // }
+        //private void dataGridView2_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        //{
+        //    e.AdvancedBorderStyle.Bottom = DataGridViewAdvancedCellBorderStyle.None;
+        //    if (e.RowIndex < 1 || e.ColumnIndex < 0)
+        //        return;
+        //    if (IsTheSameCellValue(e.ColumnIndex, e.RowIndex))
+        //    {
+        //        e.AdvancedBorderStyle.Top = DataGridViewAdvancedCellBorderStyle.None;
+        //    }
+        //    else
+        //    {
+        //        e.AdvancedBorderStyle.Top = dataGridView2.AdvancedCellBorderStyle.Top;
+        //    }
 
 
-        }
-        private void dataGridView2_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
+        //}
+        //private void dataGridView2_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        //{
 
-            if (e.RowIndex == 0)
-                return;
-            if (IsTheSameCellValue(e.ColumnIndex, e.RowIndex))
-            {
-                e.Value = "";
-                e.FormattingApplied = true;
-            }
-        }
+        //    if (e.RowIndex == 0)
+        //        return;
+        //    if (IsTheSameCellValue(e.ColumnIndex, e.RowIndex))
+        //    {
+        //        e.Value = "";
+        //        e.FormattingApplied = true;
+        //    }
+        //}
         ///
-        public void EstablecerListaLecturaDatagrid(BindingSource lista)
-        {
+        //public void EstablecerListaLecturaDatagrid(BindingSource lista)
+        //{
             
-            dataGridView2.DataSource = lista;
+        //    dataGridView2.DataSource = lista;
             
-            List<string> mes = new List<string>()
-            {
-                "Enero",
-                "Febrero",
-                "Marzo",
-                "Abril",
-                "Mayo",
-                "Junio"
-            };
+        //    List<string> mes = new List<string>()
+        //    {
+        //        "Enero",
+        //        "Febrero",
+        //        "Marzo",
+        //        "Abril",
+        //        "Mayo",
+        //        "Junio"
+        //    };
 
-            for (int i = 0; i < 1; i++)
-            {
+        //    for (int i = 0; i < 1; i++)
+        //    {
                 
-                dataGridView2.Rows[i].Cells[0].Value = mes[i];
-                dataGridView2.Rows[i+1].Cells[0].Value = mes[i];
-            }
+        //        dataGridView2.Rows[i].Cells[0].Value = mes[i];
+        //        dataGridView2.Rows[i+1].Cells[0].Value = mes[i];
+        //    }
             
             
             
 
             
-        }
+        //}
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -241,6 +245,16 @@ namespace WindowsFormsApp1
         {
             ShowSubmenu(panelSubmenuUsuario);
             EventoSelecionarUsuario?.Invoke(this, EventArgs.Empty);
+        }
+
+        public void EstablecerListaDatagrid(BindingSource lista)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void EstablecerListaLecturaDatagrid(BindingSource lista)
+        {
+            throw new NotImplementedException();
         }
     }
 
