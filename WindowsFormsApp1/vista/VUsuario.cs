@@ -37,6 +37,7 @@ namespace WindowsFormsApp1.vista
                     instancia.WindowState = FormWindowState.Normal;
                 }
                 instancia.BringToFront();
+                //p
             }
             return instancia;
         }
